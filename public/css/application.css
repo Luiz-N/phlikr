@@ -6,10 +6,21 @@ body {
   width: 80%;
   /*padding: 0px 20px 20px 20px;*/
   border: 1px dotted black;
+  text-align: center;
 }
 
 .container h1 {
   text-align: center;
+}
+
+.container form{
+
+}
+
+.container input {
+  display: block;
+  padding: .5em;
+  margin: 1em auto;
 }
 
 .container p {
