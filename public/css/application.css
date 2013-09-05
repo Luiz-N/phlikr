@@ -1,0 +1,22 @@
+body {
+
+}
+.container {
+  margin: 20px auto;
+  width: 80%;
+  /*padding: 0px 20px 20px 20px;*/
+  border: 1px dotted black;
+}
+
+.container h1 {
+  text-align: center;
+}
+
+.container p {
+  text-align: center;
+}
+
+
+th {
+  text-align: left;
+}
