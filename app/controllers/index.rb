@@ -2,19 +2,18 @@ get '/' do
   # Look in app/views/index.erb
   @photos = Photo.all
 
-
-
   erb :index
 end
 
 
-get '/new_album' do
+get '/user/profile/:username/new_album' do
   if current_user
     erb :new_album
   else
     erb :login
   end
 end
+
 
 get '/login' do
 
@@ -26,6 +25,12 @@ get '/new_user' do
   erb :new_user
 end
 
+get '/user/profile/:username' do
+  @user = current_user
+
+  erb :profile
+
+end
 
 
 
@@ -57,8 +62,22 @@ post '/user/new' do
   if @user.nil? 
     @user = User.create(params[:user])
     session[:user_id] = @user.id
-
+    redirect '/user/profile/#{@user.username}'
   end
-
-  redirect "/"
 end
+
+post '/upload_photo' do
+
+  File.open("/uploads", "w") { |io|  }
+
+end
+
+
+
+
+
+
+
+
+
+
